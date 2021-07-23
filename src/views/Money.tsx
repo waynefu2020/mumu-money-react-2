@@ -27,7 +27,7 @@ const CategoryWrapper = styled.div`
 
 const NoteWrapper = styled.div`
     display: flex;
-    border: 2px solid #f8f9fb;
+    border: 1px solid #f5f5f5;
 `
 
 function Money() {

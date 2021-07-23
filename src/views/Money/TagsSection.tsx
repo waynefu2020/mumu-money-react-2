@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useTags} from 'hooks/useTags';
+import Icon from '../../components/Icon';
 
 type Props = {
   value: number[];
@@ -28,7 +29,10 @@ const TagsSection: React.FC<Props> = (props) => {
           >{tag.name}</li>
         )}
       </ol>
-      <button onClick={addTag}>新增标签</button>
+      <button onClick={addTag}>
+        <Icon name="add"/>
+        新增
+      </button>
     </Wrapper>
   );
 };
@@ -50,9 +54,17 @@ const Wrapper = styled.section`
     }
   }
   > button{
-    background:none; border: none; padding: 2px 4px;
-    border-bottom: 1px solid #333; color: #666;
+    background:transparent; border: 1px solid #d9d9d9; padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 18px;
+    color: #666;
     margin-top: 8px;
+    display: flex;
+    align-items: center;
+    > svg{
+      margin-right: 4px;
+      fill: #e66862;
+    }
   }
 `;
 export {TagsSection};

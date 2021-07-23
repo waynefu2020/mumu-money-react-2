@@ -3,9 +3,10 @@ import React, {ChangeEventHandler} from 'react';
 import {Input} from '../../components/Input';
 
 const Wrapper = styled.section`
-  background: #f5f5f5;
-  padding: 2px 16px;
+  background: white;
+  padding: 2px 2px;
   font-size: 14px;
+  width: 100%;
 `;
 
 type Props = {
@@ -19,7 +20,7 @@ const NoteSection: React.FC<Props> = (props) => {
   };
   return (
     <Wrapper>
-      <Input label="备注" type="text" value={note} onChange={onChange}
+      <Input label="" type="text" value={note} onChange={onChange}
       placeholder="请输入备注信息"/>
     </Wrapper>
   );
