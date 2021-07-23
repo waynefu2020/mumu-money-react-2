@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import {RecordItem, useRecords} from '../hooks/useRecords';
 import {useTags} from '../hooks/useTags';
 import day from 'dayjs';
+import {ReactEcharts} from '../ReactEcharts';
 
 const CategoryWrapper = styled.div`
   background:white;
@@ -31,6 +32,24 @@ const Header = styled.h3`
 
 function Statistics() {
   const [category, setCategory] = useState<'-' | '+'>('-');
+  // const [option, setOption] = useState({
+  //   title: {
+  //     text: 'ECharts 入门示例'
+  //   },
+  //   tooltip: {},
+  //   legend: {
+  //     data:['销量']
+  //   },
+  //   xAxis: {
+  //     data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+  //   },
+  //   yAxis: {},
+  //   series: [{
+  //     name: '销量',
+  //     type: 'bar',
+  //     data: [5, 20, 36, 10, 10, 20]
+  //   }]
+  // })
   const {records} = useRecords();
   const {getName} = useTags();
   const hash: { [K: string]: RecordItem[] } = {}; // {'2020-05-11': [item, item], '2020-05-10': [item, item], '2020-05-12': [item, item, item, item]}
@@ -61,6 +80,7 @@ function Statistics() {
         <Header>
           {date}
         </Header>
+        {/*<ReactEcharts option={option}/>*/}
         <div>
           {records.map(r => {
             return <Item>

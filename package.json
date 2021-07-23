@@ -1,7 +1,7 @@
 {
   "name": "mumu-money-react",
   "version": "0.1.0",
-  "homepage": "https://frankfang.github.io/morney-13-website/",
+  "homepage": "https://github.com/waynefu2020/mumu-money-react-2",
   "private": true,
   "dependencies": {
     "@babel/core": "7.9.0",
@@ -27,6 +27,7 @@
     "dayjs": "^1.8.26",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
+    "echarts": "^5.1.2",
     "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-loader": "3.0.3",
