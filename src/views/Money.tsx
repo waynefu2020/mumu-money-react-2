@@ -22,8 +22,13 @@ const defaultFormData = {
 };
 
 const CategoryWrapper = styled.div`
-    background:#c4c4c4;
+    background:white;
 `;
+
+const NoteWrapper = styled.div`
+    display: flex;
+    border: 2px solid #f8f9fb;
+`
 
 function Money() {
   const [selected, setSelected] = useState(defaultFormData);
@@ -39,14 +44,17 @@ function Money() {
   };
   return (
     <MyLayout scrollTop={9999}>
+        <CategoryWrapper>
+            <CategorySection value={selected.category}
+                             onChange={category => onChange({category})}/>
+        </CategoryWrapper>
       <TagsSection value={selected.tagIds}
         onChange={tagIds => onChange({tagIds})}/>
-      <NoteSection value={selected.note}
-        onChange={note => onChange({note})}/>
-      <CategoryWrapper>
-        <CategorySection value={selected.category}
-          onChange={category => onChange({category})}/>
-      </CategoryWrapper>
+    <NoteWrapper>
+        <NoteSection value={selected.note}
+                     onChange={note => onChange({note})}/>
+    </NoteWrapper>
+
       <NumberPadSection value={selected.amount}
         onChange={amount => onChange({amount})}
         onOk={submit}
